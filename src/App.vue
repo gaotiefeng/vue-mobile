@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-		<van-button type="info" to="/">index</van-button>
-		<van-button type="primary" to="user">user</van-button>
-		<van-button type="danger" to="/">index</van-button>
+		
 		<router-view></router-view>
 		
   </div>
