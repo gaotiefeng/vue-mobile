@@ -16,5 +16,10 @@ export default new Router({
 		  name: 'index',
 		  component: () => import('./views/index.vue'),
 		},
+		{
+		  path: '/article/list',
+		  name: 'article',
+		  component: () => import('./views/article/list.vue'),
+		},
   ],
 });
