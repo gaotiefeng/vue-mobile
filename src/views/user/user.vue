@@ -28,6 +28,7 @@
 
 <script>
 	import Bottom from '@/components/Bottom.vue'
+	import { userLogin } from '@/api/user'
 export default {
 	data(){
 		return{
@@ -39,6 +40,14 @@ export default {
 	components: {
 	  Bottom,
 	},
+	methods: {
+		async getUsers()
+		{
+			let result = await userLogin();
+			console.log(result);
+			console.log(111);
+		}
+	}
 }
 </script>
 
