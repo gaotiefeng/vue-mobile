@@ -2,12 +2,7 @@
 	<div>
 		<van-cell-group>
 		  <van-field
-			v-model="username"
-			label="用户名"
-			placeholder="请输入用户名"
-		  />
-		  <van-field
-			v-model="phone"
+			v-model="mobile"
 			label="手机号"
 			placeholder="请输入手机号"
 		  />
@@ -28,12 +23,11 @@
 
 <script>
 	import Bottom from '@/components/Bottom.vue'
-	import { userLogin } from '@/api/user'
+	import { userInfo } from '@/api/user'
 export default {
 	data(){
 		return{
-			username : '',
-			phone : '',
+			mobile : '',
 			password:'',
 		}
 	},
@@ -46,11 +40,10 @@ export default {
 	methods: {
 		async getUsers()
 		{
-			let result = await userLogin();
-			console.log(result);
-			console.log(111);
-		}
-	}
+			let result = await userInfo()
+			console.log(result)
+		},
+	},
 }
 </script>
 
