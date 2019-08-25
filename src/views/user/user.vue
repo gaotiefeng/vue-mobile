@@ -40,6 +40,9 @@ export default {
 	components: {
 	  Bottom,
 	},
+	created() {
+		this.getUsers()
+	},
 	methods: {
 		async getUsers()
 		{
