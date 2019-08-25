@@ -23,7 +23,7 @@
 
 <script>
 	import Bottom from '@/components/Bottom.vue'
-	import { userInfo } from '@/api/user'
+	import { userInfo,userLogin } from '@/api/user'
 export default {
 	data(){
 		return{
@@ -40,7 +40,7 @@ export default {
 	methods: {
 		async getUsers()
 		{
-			let result = await userInfo()
+			let result = await userLogin()
 			console.log(result)
 		},
 	},
