@@ -13,11 +13,11 @@ service.interceptors.request.use(config => {
   if (config.method === 'post' && typeof config.data === 'string') {
     config.data = Qs.stringify(config.data)
   }
-	let token = getToken()
+	// let token = getToken()
 
-	if (token) {
-		config.headers['api-token'] = token
-	}
+	// if (token) {
+	// 	config.headers['api-token'] = token
+	// }
   return config
 }, error => {
   console.log(error) // for debug
@@ -45,11 +45,7 @@ service.interceptors.response.use(
   },
   error => {
     console.log('err' + error)// for debug
-    Message({
-      message: error.message,
-      type: 'error',
-      duration: 5 * 1000
-    })
+    
     return Promise.reject(error)
   }
 )
