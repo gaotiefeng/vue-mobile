@@ -1,4 +1,4 @@
-import request from '@/common/common.js'
+import request from '@/common/js/common.js'
 
 export function userLogin(data) {
   return request({
