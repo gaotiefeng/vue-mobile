@@ -40,7 +40,7 @@ export default {
 	methods: {
 		async getUsers()
 		{
-			let result = await userLogin()
+			let result = await userInfo()
 			console.log(result)
 		},
 	},
