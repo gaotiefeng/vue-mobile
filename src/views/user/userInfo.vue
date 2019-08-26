@@ -1,16 +1,5 @@
 <template>
 	<div>
-		<van-cell-group>
-        <van-field
-            v-model="username"
-            required
-            clearable
-            label="用户名"
-            right-icon="question-o"
-            placeholder="请输入用户名"
-            @click-right-icon="$toast('question')"
-        />
-        </van-cell-group>
 		<Bottom />
 	</div>
 </template>
