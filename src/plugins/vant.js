@@ -10,7 +10,11 @@ import { Grid, GridItem } from 'vant';
 import { Pagination } from 'vant';
 import { List } from 'vant';
 import { NoticeBar } from 'vant';
+import { AddressEdit } from 'vant';
+import { Panel } from 'vant';
 
+Vue.use(Panel);
+Vue.use(AddressEdit);
 Vue.use(NoticeBar);
 Vue.use(List);
 Vue.use(Pagination);

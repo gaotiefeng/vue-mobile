@@ -1,6 +1,16 @@
 <template>
 	<div>
-		
+		<van-cell-group>
+        <van-field
+            v-model="username"
+            required
+            clearable
+            label="用户名"
+            right-icon="question-o"
+            placeholder="请输入用户名"
+            @click-right-icon="$toast('question')"
+        />
+        </van-cell-group>
 		<Bottom />
 	</div>
 </template>
@@ -9,6 +19,13 @@
 	import Bottom from '@/components/Bottom.vue'
     import {userInfo} from '@/api/user'
 export default {
+    data(){
+            return {
+                form:{
+                    mobile:'',
+                }
+        }
+    },
     components: {
         Bottom,
         },
@@ -19,7 +36,9 @@ export default {
         async detail()
         {
             let result = await userInfo()
-            console.log(result);
+            if(result.code == 0){
+                this.form = result.data
+            }
         }
     }
 }
