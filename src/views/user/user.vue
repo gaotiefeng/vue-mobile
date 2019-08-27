@@ -7,14 +7,16 @@
 			placeholder="请输入手机号"
 		  />
 		  <van-field
-		  			v-model="password"
-		  			label="密码"
-		  			placeholder="请输入密码"
+			v-model="password"
+			label="密码"
+			placeholder="请输入密码"
 		  />
 		</van-cell-group>
 		
 		<van-divider :style="{ color: '#1989fa', borderColor: '#1989fa', padding: '0 16px' }">
-				<van-button type="info">登录</van-button>
+
+				<van-button type="info" @click="login()">登录</van-button>
+
 		</van-divider>
 		
 		<Bottom />
@@ -23,7 +25,8 @@
 
 <script>
 	import Bottom from '@/components/Bottom.vue'
-	import { userInfo,userLogin } from '@/api/user'
+	import { userLogin } from '@/api/user'
+	import { setToken } from '@/common/js/cache'
 export default {
 	data(){
 		return{
@@ -35,12 +38,22 @@ export default {
 	  Bottom,
 	},
 	created() {
-		this.getUsers()
+
 	},
 	methods: {
-		async getUsers()
+		login(){
+			let data = {
+				mobile : this.mobile,
+				password : this.password,
+			}
+			this.getToken(data)
+		},
+		async getToken(data)
 		{
-			let result = await userInfo()
+			let result = await userLogin(data)
+			if(result.code == 0){
+				setToken(result.data.token)
+			}
 			console.log(result)
 		},
 	},

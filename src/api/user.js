@@ -1,17 +1,17 @@
 import request from '@/common/js/common.js'
 
-export function userLogin(data) {
+export function userLogin(query) {
   return request({
     url: '/user/login',
     method: 'post',
-    data:data,
+    data:query,
   })
 }
 
-export  function userInfo(data) {
+export  function userInfo(query) {
   return request({
     url: '/user/info',
     method: 'get',
-    params: data,
+    params: query,
   })
 }

@@ -7,11 +7,13 @@ import routes from '@/router'
 // 创建axios实例
 const service = axios.create({
   baseURL: process.env.VUE_APP_WEB_API, // api的base_url//process.env.BASE_API
-  timeout: 50000 // 请求超时时间
+  timeout: 5000 // 请求超时时间
 })
 
 service.interceptors.request.use(config => {
+
   if (config.method === 'post' && typeof config.data === 'string') {
+    alert(11)
     config.data = Qs.stringify(config.data)
   }
   // Do something before request is sent
@@ -20,9 +22,10 @@ service.interceptors.request.use(config => {
 	 	config.headers['Auth-Token'] = token
    }
 
-   config.headers['Content-Type'] = 'application/json'
-   config.headers['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8'
-   config.headers['Content-Type'] = 'multipart/form-data'
+   //config.headers['Content-Type'] = 'application/json'
+   //config.headers['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8'
+   //config.headers['Content-Type'] = 'multipart/form-data'
+   //config.headers['Content-Type'] = 'application/x-www-form-urlencoded'
   return config
 }, error => {
   // Do something with request error
