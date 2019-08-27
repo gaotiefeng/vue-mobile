@@ -1,5 +1,18 @@
 <template>
 	<div>
+        <p style="color:red">{{form.mobile}}</p>
+        <p style="">
+        <van-image
+        round
+        width="5rem"
+        height="5rem"
+        src="https://img.yzcdn.cn/vant/cat.jpeg"
+        /></p>
+        
+
+
+
+
 		<Bottom />
 	</div>
 </template>

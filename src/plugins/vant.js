@@ -12,7 +12,9 @@ import { List } from 'vant';
 import { NoticeBar } from 'vant';
 import { AddressEdit } from 'vant';
 import { Panel } from 'vant';
+import { Image } from 'vant';
 
+Vue.use(Image);
 Vue.use(Panel);
 Vue.use(AddressEdit);
 Vue.use(NoticeBar);
