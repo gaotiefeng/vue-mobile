@@ -10,14 +10,13 @@
 </template>
 
 <script>
-	export default{
-		data(){
-			return{
-				active:'',
-			}
-		},
-		
-	}
+ export default{
+ data() {
+ return {
+ active: '',
+ };
+ },
+ };
 </script>
 
 <style>

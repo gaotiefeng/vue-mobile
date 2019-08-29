@@ -7,15 +7,12 @@
 </template>
 
 <script>
-	
-export default {
-  name: 'app',
-  created() {
-    global.vue = this
-  },
-  components: {
-  }
-}
+ export default {
+ name: 'app',
+ created() {
+ global.vue = this;
+ },
+};
 </script>
 
 <style>
