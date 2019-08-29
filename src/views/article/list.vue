@@ -28,7 +28,7 @@ data() {
 	  Bottom,
 	  Top,
 	},
-	  methods: {
+	methods: {
 		onLoad() {
 			
 		}

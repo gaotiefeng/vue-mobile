@@ -2,7 +2,7 @@
 	<div>
         <div class="mobile">
             <p>流年</p>
-            {{form.mobile}}
+            <p v-bind="form.mobile"></p>
         </div>
         <p class="image">
         <van-image
@@ -19,32 +19,33 @@
 </template>
 
 <script>
-	import Bottom from '@/components/Bottom.vue'
-    import {userInfo} from '@/api/user'
+import Bottom from '@/components/Bottom.vue';
+import {userInfo} from '@/api/user';
+
 export default {
-    data(){
+    data() {
             return {
-                form:{
-                    mobile:'',
-                }
-        }
+                form: {
+                    mobile: '',
+                },
+        };
     },
     components: {
         Bottom,
         },
-    created(){
-        this.detail()
+    created() {
+        this.detail();
     },
-    methods:{
-        async detail()
-        {
-            let result = await userInfo()
-            if(result.code == 0){
-                this.form = result.data
+    methods: {
+        async detail() {
+            const result = await userInfo();
+            if (result.code === 0) {
+                this.form = result.data;
             }
-        }
-    }
-}
+        },
+    },
+
+};
 </script>
 
 <style>
