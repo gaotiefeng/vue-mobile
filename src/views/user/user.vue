@@ -24,45 +24,39 @@
 </template>
 
 <script>
-	import Bottom from '@/components/Bottom.vue'
-	import { userLogin } from '@/api/user'
-	import { setToken } from '@/common/js/cache'
-	import {ERR_OK}	from '@/common/js/config'
+import Bottom from '@/components/Bottom.vue';
+import { userLogin } from '@/api/user';
+import { setToken } from '@/common/js/cache';
+import {ERR_OK}	from '@/common/js/config';
 export default {
-	data(){
-		return{
-			mobile : '',
-			password:'',
-		}
-	},
-	components: {
-	  Bottom,
-	},
-	created() {
+ data() {
+ return {
+ mobile : '',
+ password: '',
+ };
+ },
+ components: {
+ Bottom,
+ },
+ methods: {
+ login() {
+ const data = {
+ mobile : this.mobile,
+ password : this.password,
+ };
+ this.getToken(data); },
+ async getToken(data) {
+ const result = await userLogin(data);
+ if (result.code === ERR_OK) {
+ const res = await setToken(result.data.token);
+ this.$router.push({
+            path: '/',
+ });
+ }
+},
+},
 
-	},
-	methods: {
-		login(){
-			let data = {
-				mobile : this.mobile,
-				password : this.password,
-			}
-			this.getToken(data)
-		},
-		async getToken(data)
-		{
-			let result = await userLogin(data)
-			if(result.code == ERR_OK){
-				let res = await setToken(result.data.token)
-				
-				this.$router.push({
-                'path':'/'
-            	})
-			}
-			console.log(result)
-		},
-	},
-}
+};
 </script>
 
 <style>
