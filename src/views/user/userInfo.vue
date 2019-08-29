@@ -1,7 +1,10 @@
 <template>
 	<div>
-        <p style="color:red">{{form.mobile}}</p>
-        <p style="">
+        <div class="mobile">
+            <p>流年</p>
+            {{form.mobile}}
+        </div>
+        <p class="image">
         <van-image
         round
         width="5rem"
@@ -9,8 +12,6 @@
         src="https://img.yzcdn.cn/vant/cat.jpeg"
         /></p>
         
-
-
 
 
 		<Bottom />
@@ -47,4 +48,12 @@ export default {
 </script>
 
 <style>
+.mobile{
+    color: red;
+    float: right;
+    margin-right: 145px;
+}
+.image{
+
+}
 </style>

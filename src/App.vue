@@ -10,6 +10,9 @@
 	
 export default {
   name: 'app',
+  created() {
+    global.vue = this
+  },
   components: {
   }
 }

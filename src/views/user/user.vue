@@ -27,6 +27,7 @@
 	import Bottom from '@/components/Bottom.vue'
 	import { userLogin } from '@/api/user'
 	import { setToken } from '@/common/js/cache'
+	import {ERR_OK}	from '@/common/js/config'
 export default {
 	data(){
 		return{
@@ -51,8 +52,12 @@ export default {
 		async getToken(data)
 		{
 			let result = await userLogin(data)
-			if(result.code == 0){
-				setToken(result.data.token)
+			if(result.code == ERR_OK){
+				let res = await setToken(result.data.token)
+				
+				this.$router.push({
+                'path':'/'
+            	})
 			}
 			console.log(result)
 		},
