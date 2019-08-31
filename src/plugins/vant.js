@@ -13,7 +13,11 @@ import { NoticeBar } from 'vant';
 import { AddressEdit } from 'vant';
 import { Panel } from 'vant';
 import { Image } from 'vant';
+import { PasswordInput, NumberKeyboard } from 'vant';
+import { Dialog } from 'vant';
 
+Vue.use(Dialog);
+Vue.use(PasswordInput).use(NumberKeyboard);
 Vue.use(Image);
 Vue.use(Panel);
 Vue.use(AddressEdit);

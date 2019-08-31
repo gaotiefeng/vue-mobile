@@ -2,7 +2,7 @@
 	<div>
         <div class="mobile">
             <p>流年</p>
-            <p v-bind="form.mobile"></p>
+            <p>{{form.mobile}}</p>
         </div>
         <p class="image">
         <van-image

@@ -18,6 +18,12 @@
 				<van-button type="info" @click="login()">登录</van-button>
 
 		</van-divider>
+
+		<van-divider :style="{ color: '#1989fa', borderColor: '#1989fa', padding: '0 16px' }">
+
+				<van-button type="info" @click="register()">注册</van-button>
+
+		</van-divider>
 		
 		<Bottom />
 	</div>
@@ -53,6 +59,11 @@ export default {
             path: '/',
  });
  }
+},
+register() {
+this.$router.push({
+ path: '/user/register',
+});
 },
 },
 

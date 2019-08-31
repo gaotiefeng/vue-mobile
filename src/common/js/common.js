@@ -13,9 +13,9 @@ const service = axios.create({
 service.interceptors.request.use(config => {
 
   if (config.method === 'post' && typeof config.data === 'string') {
-    alert(11)
     config.data = Qs.stringify(config.data)
   }
+  console.log(config.data)
   // Do something before request is sent
   let token = getToken()
    if (token) {

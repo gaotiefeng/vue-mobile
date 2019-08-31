@@ -15,3 +15,11 @@ export  function userInfo(query) {
     params: query,
   })
 }
+
+export function userRegister(query) {
+  return request({
+    url: '/user/register',
+    method: 'post',
+    data: query,
+  })
+}
