@@ -2,7 +2,8 @@ import axios from 'axios';
 import Qs from 'qs';
 import * as errors from '@/common/js/config';
 import {getToken} from '@/common/js/cache';
-import routes from '@/router'
+import routes from '@/router';
+import { Dialog } from 'vant';
 
 // 创建axios实例
 const service = axios.create({
@@ -38,13 +39,23 @@ service.interceptors.request.use(config => {
 service.interceptors.response.use(response =>{
   let res = response.data
   if (res.code == errors.ERROR_TOKEN_ILLEGAL || res.code == errors.ERROR_TOKEN) {
-      alert('需要登录')
-      routes.push({name: 'userLogin'})
+      Dialog.alert({
+        title: 'LOGIN',
+        message: '请先登录...'
+      }).then(() => {
+        routes.push({name: 'userLogin'})
+        // on close
+      });
       return res;
   }
   if(res.code != 0)
   {
-    alert(res.message)
+      Dialog.alert({
+      title: 'ERROR',
+      message: res.message
+    }).then(() => {
+      // on close
+    });
   }
   return res
 },function (error){
