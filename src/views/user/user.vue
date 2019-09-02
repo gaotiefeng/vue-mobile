@@ -1,31 +1,34 @@
 <template>
 	<div>
+		
+		<div class="first"></div>
+
+		<div class="userLogin">
+
 		<van-cell-group>
 		  <van-field
 			v-model="mobile"
-			label="手机号"
+			label="手机号:"
 			placeholder="请输入手机号"
 		  />
 		  <van-field
 			v-model="password"
-			label="密码"
+			label="密码:"
 			placeholder="请输入密码"
 		  />
 		</van-cell-group>
 		
-		<van-divider :style="{ color: '#1989fa', borderColor: '#1989fa', padding: '0 16px' }">
-
-				<van-button type="info" @click="login()">登录</van-button>
-
-		</van-divider>
-
-		<van-divider :style="{ color: '#1989fa', borderColor: '#1989fa', padding: '0 16px' }">
-
-				<van-button type="info" @click="register()">注册</van-button>
-
-		</van-divider>
 		
+
+		<van-button type="info" @click="login()" style="margin:30px;">登录</van-button>
+
+		<van-button type="info" @click="register()" style="margin:30px;">注册</van-button>
+
+		</div>
+		<div class="next"></div>
+
 		<Bottom />
+
 	</div>
 </template>
 
@@ -71,4 +74,12 @@ this.$router.push({
 </script>
 
 <style>
+.first {
+  height: 200px;
+  background: linear-gradient(red, blue); /* 标准的语法 */
+}
+.next {
+	height: 260px;
+	background: linear-gradient(blue,red); /* 标准的语法 */
+}
 </style>
