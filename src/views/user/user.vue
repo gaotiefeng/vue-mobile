@@ -1,10 +1,8 @@
 <template>
-	<div>
+	<div class="login">
 		
 		<div class="first"></div>
-
-		<div class="userLogin">
-
+		<h3 class="h3">登录</h3>
 		<van-cell-group>
 		  <van-field
 			v-model="mobile"
@@ -20,11 +18,11 @@
 		
 		
 
-		<van-button type="info" @click="login()" style="margin:30px;">登录</van-button>
+		<van-button type="info" size="large" @click="login()" style="margin:30px;">登录</van-button>
 
-		<van-button type="info" @click="register()" style="margin:30px;">注册</van-button>
+		<p @click="register()" class="resgister">立即注册</p>
 
-		</div>
+
 		<div class="next"></div>
 
 		<Bottom />
@@ -73,13 +71,24 @@ this.$router.push({
 };
 </script>
 
-<style>
-.first {
-  height: 200px;
-  background: linear-gradient(red, blue); /* 标准的语法 */
-}
-.next {
-	height: 260px;
-	background: linear-gradient(blue,red); /* 标准的语法 */
+<style lang="less">
+
+.login {
+	width:85%;
+	margin: auto 0px;
+	.h3 {
+		margin-top: 110px;
+    	margin-bottom: 40px;
+	}
+	.first {
+	background: linear-gradient(red, blue); /* 标准的语法 */
+	}
+	.next {
+		background: linear-gradient(blue,red); /* 标准的语法 */
+	}
+	.resgister {
+		margin: 30px;
+		color : red;
+	}
 }
 </style>
