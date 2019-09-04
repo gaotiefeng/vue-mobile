@@ -9,7 +9,7 @@
             label="手机号:"
             placeholder="请输入手机号"
         />
-
+        <div class="next" style="margin-top:30px;margin-bottom:30px;">  </div>
         <van-field
             v-model="password"
             type="password"
@@ -17,7 +17,7 @@
             placeholder="请输入密码"
             required
         />
-        <div style="margin-top:10px"></div>
+        <div style="margin-top:40px"></div>
         <van-button type="danger" size="large" @click="register()">注册</van-button>
 
 </div>
@@ -63,9 +63,14 @@ export default Vue.extend({
 });
 </script>
 
-<style scoped>
-.first {
-  height: 200px;
-  background: linear-gradient(red, blue); /* 标准的语法 */
+<style lang="less" scoped>
+
+.register {
+    width: 85%;
+    margin-left: 8%;
+    text-align: center;
+    .first {
+    height: 200px;
+    }
 }
 </style>
