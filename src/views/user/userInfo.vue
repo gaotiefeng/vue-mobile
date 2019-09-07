@@ -12,6 +12,9 @@
         src="https://img.yzcdn.cn/vant/cat.jpeg"
         /></p>
         
+        <div class="article">我的文章</div>
+        <div class="article">我的朋友</div>
+        <div class="article">我的地址</div>
 
 
 		<Bottom />
@@ -56,5 +59,15 @@ export default {
 }
 .image{
 
+}
+.article {
+    font-size: 22px;
+    height: 24px;
+    line-height: 24px;
+    margin-top: 20px;
+    margin-right: 145px;
+    margin-left: 54px;
+    float: left;
+    color: #a09d9d;
 }
 </style>
