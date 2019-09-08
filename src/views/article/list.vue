@@ -2,7 +2,7 @@
 	<div>
 		<Top />
 
-		<div>
+		<div class="article">
 			<div>
 				<p class="user">
 				<van-image
@@ -57,5 +57,9 @@
 <style lang="less" scoped>
 .user {
 	left: 0px;
+}
+.article {
+	height: 60px;
+	line-height: 24px;
 }
 </style>
