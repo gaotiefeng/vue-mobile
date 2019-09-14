@@ -3,90 +3,35 @@
 		<Top />
 
 		<div class="article">
-			<div class="user">
-				<p class="userimage">
-				<van-image
-					round
-					width="4rem"
-					height="4rem"
-					src="https://img.yzcdn.cn/vant/cat.jpeg"
-					
-				/>
-				</p>
-				<p class="name">
-				<span>六年</span>
-				</p>
+			<div class="title">
+				<span>你知道这5年我怎么过的吗</span>
 			</div>
-			<div class="content">12344eshasdjfadlslaso  pawo  pweopaewourwuawaiopwjraiarew</div>
-			<div class="foot">
-				<span class="foot1">浏览数：1233</span>
-				<span class="foot2">点赞数：233</span>
-			</div>
-		</div>
-
-<div class="article">
-			<div class="user">
-				<p class="userimage">
-				<van-image
-					round
-					width="4rem"
-					height="4rem"
-					src="https://img.yzcdn.cn/vant/cat.jpeg"
-					
-				/>
-				</p>
-				<p class="name">
-				<span>六年</span>
-				</p>
-			</div>
-			<div class="content">12344eshasdjfadlslaso  pawo  pweopaewourwuawaiopwjraiarew</div>
-			<div class="foot">
-				<span class="foot1">浏览数：1233</span>
-				<span class="foot2">点赞数：233</span>
+			<div class="content">阿伟已经死了，你选的吗？阿伟已经死了，你选的吗阿伟已经死了，你选的吗阿伟已经死了，你选的吗阿伟已经死了，你选的吗</div>
+			<div class="date">
+				<span class="date1">2019-09-14</span>
+				<span class="">浏览数</span><span>1</span>
 			</div>
 		</div>
 
 		<div class="article">
-			<div class="user">
-				<p class="userimage">
-				<van-image
-					round
-					width="4rem"
-					height="4rem"
-					src="https://img.yzcdn.cn/vant/cat.jpeg"
-					
-				/>
-				</p>
-				<p class="name">
-				<span>六年</span>
-				</p>
+			<div class="title">
+				<span>你知道这5年我怎么过的吗</span>
 			</div>
-			<div class="content">12344eshasdjfadlslaso  pawo  pweopaewourwuawaiopwjraiarew</div>
-			<div class="foot">
-				<span class="foot1">浏览数：1233</span>
-				<span class="foot2">点赞数：233</span>
+			<div class="content">阿伟已经死了，你选的吗？</div>
+			<div class="date">
+				<span class="date1">2019-09-14</span>
+				<span class="">浏览数</span><span>1</span>
 			</div>
 		</div>
-
+		
 		<div class="article">
-			<div class="user">
-				<p class="userimage">
-				<van-image
-					round
-					width="4rem"
-					height="4rem"
-					src="https://img.yzcdn.cn/vant/cat.jpeg"
-					
-				/>
-				</p>
-				<p class="name">
-				<span>六年</span>
-				</p>
+			<div class="title">
+				<span>你知道这5年我怎么过的吗</span>
 			</div>
-			<div class="content">12344eshasdjfadlslaso  pawo  pweopaewourwuawaiopwjraiarew</div>
-			<div class="foot">
-				<span class="foot1">浏览数：1233</span>
-				<span class="foot2">点赞数：233</span>
+			<div class="content">阿伟已经死了，你选的吗？</div>
+			<div class="date">
+				<span class="date1">2019-09-14</span>
+				<span class="">浏览数</span><span>1</span>
 			</div>
 		</div>
 		<!-- <van-pagination 
@@ -123,34 +68,26 @@
 
 <style lang="less" scoped>
 .article {
-	overflow: hidden;
 width:85%;
-.user {
-	.userimage {
-	position: absolute;
-	left: 30px;
-	top: 36px;
-	}
-	.name {
-		font-size: 24px;
-		color:red;
-	}
+margin: 10px;
+.title {
+	font-size: 20px;
+	color:#00000;
 }
 .content {
-	margin-top:22px;
-	font-size: 20px;
-    color: rosybrown;
-    margin-bottom: 20px;
-    margin-left: 30px;
+	margin-top:10px;
+	font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
     line-height: 24px;
 }
-.foot {
-	font-size: 17px;
+.date {
+	font-size: 12px;
     color: royalblue;
     line-height: 16px;
 	margin-right: 4px;
-	.foot1{
-		margin-right: 4px;	
+	.date1{
+		margin-right: 8px;	
 	}
 }
 }
