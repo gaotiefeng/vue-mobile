@@ -78,7 +78,8 @@ this.$router.push({
 	margin: auto 0px;
 	.h3 {
 		margin-top: 110px;
-    	margin-bottom: 40px;
+		margin-bottom: 40px;
+		text-align: center;
 	}
 	.first {
 	background: linear-gradient(red, blue); /* 标准的语法 */
@@ -89,6 +90,7 @@ this.$router.push({
 	.resgister {
 		margin: 30px;
 		color : red;
+		text-align: center;
 	}
 }
 </style>
