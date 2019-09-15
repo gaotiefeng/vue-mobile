@@ -48,6 +48,7 @@
 <script>
  import Bottom from '@/components/Bottom.vue';
  import Top from '@/components/Top.vue';
+ import { articleList } from '@/api/article'
  export default {
  data() {
  return {
@@ -55,13 +56,25 @@
  list: [],
  loading: false,
  finished: false,
+ offset: 0,
+ limit: 10,
  };
  },
  components: {
  Bottom,
  Top,
  },
+ created () {
+	 var query = {
+		 'offset' : offset,
+		 'limit' : limit,
+	 };
+	 this.list(query);
+ },
  methods: {
+	 async list(query) {
+		  const result = await articleList(query);
+	 }
  },
 };
 </script>
