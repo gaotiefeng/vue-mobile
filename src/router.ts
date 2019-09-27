@@ -26,14 +26,9 @@ export default new Router({
     component: () => import('./views/article/list.vue'),
     },
     {
-      path: '/user/register',
-      name: 'register',
+    path: '/user/register',
+    name: 'register',
       component: () => import('./views/user/register.vue'),
-      },
-      {
-        path: '/chat/index',
-        name: 'chat',
-        component: () => import('./views/chat/chat.vue'),
-        },
+    },
   ],
 });
